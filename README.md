@@ -11,7 +11,7 @@ Installation
 * Step 1 : Install
 
 ```sh
-npm install express-mongoose-docs
+npm install express-mongoose-doc
 ```
 
 * Step 2 : Configure
@@ -19,7 +19,7 @@ npm install express-mongoose-docs
 Add these lines to your app.js file
 
 ```sh
-var docs = require("express-mongoose-docs");
+var docs = require("express-mongoose-doc");
 ```
 
 Make sure the following line comes after all express middleware such as app.use(express.bodyParser());
