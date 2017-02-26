@@ -2,6 +2,9 @@
 ## Eclipse
 #################
 
+node_modules
+node_modules_back
+
 *.pydevproject
 .project
 .metadata
