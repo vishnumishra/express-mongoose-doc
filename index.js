@@ -48,7 +48,8 @@ module.exports = function (app, mongoose) {
 
             res.send({routes: routes, schemas: schemas});
         } catch (e) {
-            res.send(400,e);
+            res.status(400).send(e)
+            // res.send(400,e);
         }
     });
 
@@ -62,7 +63,6 @@ var nestedSchemas;
 function generateSchemaDocs(mongoose) {
 
     nestedSchemas = [];
-
     // Transform models object to an array
     var schemas = _.pairs(mongoose.modelSchemas);
 
@@ -109,8 +109,10 @@ function getFieldInfo(path) {
     if (path.options.type) {
         field.type = path.options.type.name;
 
-        if (path.options.type instanceof Array && !path.schema)
-            field.type = path.options.type[0].name + " []";
+        if (path.options.type instanceof Array && !path.schema){
+            if(path.options.type[0])
+            field.type = path.options.type[0].schemaName + " []";
+        }
     }
 
     field.min = path.options.min;
