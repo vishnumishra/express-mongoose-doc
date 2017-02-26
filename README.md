@@ -32,4 +32,4 @@ That's it. The Docs web page should be accessible at Your-Base-URL/apiDocs
 
 Example: http://localhost:5000/apiDocs
 
-Thanks to nabeel-ahmad for express-mongoose-docs ![express-mongoose-docs](https://raw.github.com/nabeel-ahmad/express-mongoose-docs "express-mongoose-docs")
+Thanks to nabeel-ahmad for express-mongoose-docs (https://raw.github.com/nabeel-ahmad/express-mongoose-docs "express-mongoose-docs")
